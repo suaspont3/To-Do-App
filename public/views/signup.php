@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/201024f681.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/utilities.css">
     <link rel="stylesheet" href="public/css/intro.css">
+    <script src="public/js/redirect.js"></script>
     <title>TodoNow | Sign Up Page</title>
 </head>
 <body>
@@ -17,7 +18,16 @@
         <img src="public/img/logo.png" alt="logo" class="logo">
         <div class="dialog-window">
             <h1 class="dialog-type">Sign Up</h1>
-            <form action="" class="dialog-form">
+            <form action="signup" method="POST" class="dialog-form">
+                <div class="message">
+                    <?php if(isset($messages)){
+                        foreach($messages as $message)
+                        {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
                 <div class="form-group">
                     <i class="far fa-user"></i>
                     <input type="text" name="username" id="username" class="light-font" placeholder="Enter username">

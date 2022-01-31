@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/201024f681.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/utilities.css">
     <link rel="stylesheet" href="public/css/intro.css">
-    <script src="redirect.js"></script>
+    <script src="public/js/redirect.js"></script>
     <title>TodoNow</title>
 </head>
 <body>

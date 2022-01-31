@@ -143,3 +143,9 @@ h1, h2 {
 .dialog-option {
     padding: 30px;
 }
+
+/* Message Styling */
+.message {
+    text-align: center;
+    color: #ff0000;
+}
