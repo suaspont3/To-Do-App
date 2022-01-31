@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/201024f681.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/utilities.css">
     <link rel="stylesheet" href="public/css/intro.css">
+
     <script src="public/js/redirect.js"></script>
     <title>TodoNow | Login Page</title>
 </head>
@@ -35,7 +36,7 @@
                 </div>
                 <div class="form-group last-element">
                     <i class="fas fa-lock"></i>
-                    <input type="text" name="password" id="password" class="light-font" placeholder="Enter your password">
+                    <input type="password" name="password" id="password" class="light-font" placeholder="Enter your password">
                     <label for="password">PASSWORD</label>
                 </div>
                 <button type="submit" class="btn">Log In</button>
