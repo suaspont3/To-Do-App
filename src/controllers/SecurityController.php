@@ -21,6 +21,10 @@ class SecurityController extends AppController {
         $username = $_POST["username"];
         $password = $_POST['password'];
 
+        if (!$username || !$password) {
+            return $this->render('login', ['messages' => ['Please fill in blanks!']]);
+        }
+
         $user = $this->userRepository->getUser('username', $username);
         if (!$user) {
             return $this->render('login', ['messages' => ['User with this username does not exist!']]);
@@ -48,6 +52,10 @@ class SecurityController extends AppController {
         $username = $_POST["username"];
         $email = $_POST["email"];
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+        if (!$username || !$email || !$password) {
+            return $this->render('signup', ['messages' => ['Please fill in blanks!']]);
+        }
 
         $user = $this->userRepository->getUser('email', $email);
         if ($user) {
