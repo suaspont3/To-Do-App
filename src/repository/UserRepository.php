@@ -10,9 +10,13 @@ class UserRepository extends Repository {
             $stmt = $this->database->connect()->prepare('
                 SELECT * FROM public.users WHERE username = :value
             ');
-        } else {
+        } else if ($attribute == 'email') {
             $stmt = $this->database->connect()->prepare('
                 SELECT * FROM public.users WHERE email = :value
+            ');
+        } else {
+            $stmt = $this->database->connect()->prepare('
+                SELECT * FROM public.users WHERE id = :value
             ');
         }
         $stmt->bindParam(':value', $value, PDO::PARAM_STR);

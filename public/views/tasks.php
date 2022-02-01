@@ -42,7 +42,6 @@
                 </button>
             </div>
             <div class="content">
-
                 <div class="content-header">
                     <h1>Today</h1>
                     <!--     [+]TODO: Redirect to addTask (index.php -> Routing.php -> TaskController.php)        -->
