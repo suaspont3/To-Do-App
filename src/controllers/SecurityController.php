@@ -35,7 +35,6 @@ class SecurityController extends AppController {
         $_SESSION['username'] = $user->getUsername();
         $_SESSION['email'] = $user->getEmail();
         $_SESSION['password'] = $user->getPassword();
-        $_SESSION['logged_in'] = true;
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/tasks");
@@ -62,5 +61,22 @@ class SecurityController extends AppController {
 
         $this->userRepository->setUser($username, $email, $password);
         $this->render('login', ['messages' => ['You have registered successfully, please log in']]);
+    }
+
+    public function logout() {
+        session_start();
+        if (!$this->isPost()) {
+            return $this->render('settings');
+        }
+
+        session_unset();
+        unset($_SESSION['id']);
+        unset($_SESSION['username']);
+        unset($_SESSION['email']);
+        unset($_SESSION['password']);
+        session_destroy();
+
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/login");
     }
 }

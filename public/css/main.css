@@ -212,3 +212,25 @@ body {
     flex-direction: row;
     gap: 10px;
 }
+
+/* Settings Form Styling */
+.settings-form {
+    margin-top: 15px;
+}
+
+/* Settings Element Styling */
+.settings-element {
+    margin-bottom: 10px;
+}
+
+.settings-element label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.settings-element input {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    padding: 3px;
+}
