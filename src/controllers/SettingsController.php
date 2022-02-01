@@ -13,6 +13,10 @@ class SettingsController extends AppController {
 
     public function settings() {
         session_start();
+        if (!$_SESSION['isLoggedIn']) {
+            return $this->render('login');
+        }
+
         if (!$this->isPost()) {
             return $this->render('settings');
         }

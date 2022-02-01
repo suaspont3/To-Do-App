@@ -17,6 +17,10 @@ class TaskController extends AppController {
 
     public function tasks() {
         session_start();
+        if (!$_SESSION['isLoggedIn']) {
+            return $this->render('login');
+        }
+
         $userID = $_SESSION['id'];
         $tasks = $this->taskRepository->getTasks($userID);
         if (!$tasks) {
@@ -27,6 +31,10 @@ class TaskController extends AppController {
 
     public function addTask() {
         session_start();
+        if (!$_SESSION['isLoggedIn']) {
+            return $this->render('login');
+        }
+
         if (!$this->isPost()) {
             return $this->render('addTask');
         }
@@ -44,6 +52,10 @@ class TaskController extends AppController {
 
     public function deleteTask() {
         session_start();
+        if (!$_SESSION['isLoggedIn']) {
+            return $this->render('login');
+        }
+
         if(!$this->isPost()) {
             return $this->render('tasks');
         }

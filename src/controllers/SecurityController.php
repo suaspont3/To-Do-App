@@ -3,17 +3,24 @@
 require_once 'AppController.php';
 require_once __DIR__.'/../models/User.php';
 require_once __DIR__.'/../repository/UserRepository.php';
+require_once __DIR__.'/../controllers/TaskController.php';
 
 class SecurityController extends AppController {
     private $userRepository;
+    private $taskController;
 
     public function __construct() {
         parent::__construct();
         $this->userRepository = new UserRepository();
+        $this->taskController = new TaskController();
     }
 
     public function login() {
         session_start();
+        if ($_SESSION['isLoggedIn']) {
+            $this->taskController->tasks();
+        }
+
         if (!$this->isPost()) {
             return $this->render('login');
         }
@@ -39,12 +46,18 @@ class SecurityController extends AppController {
         $_SESSION['username'] = $user->getUsername();
         $_SESSION['email'] = $user->getEmail();
         $_SESSION['password'] = $user->getPassword();
+        $_SESSION['isLoggedIn'] = true;
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/tasks");
     }
 
     public function signup() {
+        session_start();
+        if ($_SESSION['isLoggedIn']) {
+            $this->taskController->tasks();
+        }
+
         if (!$this->isPost()) {
             return $this->render('signup');
         }
@@ -82,6 +95,7 @@ class SecurityController extends AppController {
         unset($_SESSION['username']);
         unset($_SESSION['email']);
         unset($_SESSION['password']);
+        unset($_SESSION['isLoggedIn']);
         session_destroy();
 
         $url = "http://$_SERVER[HTTP_HOST]";
