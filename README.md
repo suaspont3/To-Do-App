@@ -10,7 +10,7 @@ Na stronie rejestracji użytkownik ma możliwość wypełnienia formularza skła
 <span style="color: red">Given username already exists!</span>
 <br>
 <br>
-**password** - Pole dla podania hasła użytkownika.
+> **password** - Pole dla podania hasła użytkownika.
 <br>
 <br>
 **email** - Pola dla podania poczty elektronicznej użytkownika. W przypadku jeżeli użytkownik wprowadzi pocztę elektroniczną, która już znajduje się w bazie danych, zostanie wyświetlony komunikat:<br>
