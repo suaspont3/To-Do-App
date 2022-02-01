@@ -6,4 +6,8 @@ class DefaultController extends AppController {
     public function index() {
         $this->render('login');
     }
+
+    public function settings() {
+        $this->render('settings');
+    }
 }

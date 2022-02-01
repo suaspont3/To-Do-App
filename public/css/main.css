@@ -1,0 +1,214 @@
+/*
+ * Stylings for task and user configuration page
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Roboto:wght@300;400;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Core Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-bg-color);
+}
+
+/* "Main" Styling */
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    width: 400px;
+}
+
+.navbar::before {
+    content: '';
+    background: var(--side-bar-color);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+}
+
+/* Navbar Logo Styling */
+.logo {
+    width: 100%;
+    padding: 15px 20px 30px;
+}
+
+/* Navbar Element Styling */
+.navbar-element {
+    padding: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.current::before {
+    content: '';
+    background: #373737;
+    opacity: 0.15;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Navbar Button(Redirection) Styling */
+.btn-redirect {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    border: none;
+    margin: 0px 46px;
+    cursor: pointer;
+}
+
+.btn-redirect:hover h2 {
+    color: var(--primary-font-color);
+}
+
+.btn-redirect i {
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+}
+
+.btn-redirect h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+/* Section Styling */
+.section {
+    width: 100%;
+}
+
+/* Section Container Styling */
+.section-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px 0px 50px;
+}
+
+/* Section Header Styling */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 27px;
+}
+
+.user-logo {
+    border: none;
+    width: 43px;
+    height: 43px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 3px 6px #00000029;
+    cursor: pointer;
+}
+
+.user-logo:hover {
+    background: var(--primary-bg-color);
+}
+
+/* Section Content Styling */
+.content {
+
+}
+
+/* Content Header Styling */
+.content-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--primary-font-color);
+    padding-bottom: 10px;
+}
+
+.add-btn {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.add-btn span {
+    display: block-inline;
+    color: red;
+    margin-right: 5px;
+}
+
+.add-btn:hover {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* Todo Items Styling */
+.todo-items {
+    display: flex;
+    margin: 15px 0px 0px 10px;
+    font-size: 20px;
+}
+
+.item input {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+/* Dialog Window Styling */
+.dialog-window {
+    margin: 20px 0px 0px 30px;
+}
+
+.dialog-window input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--primary-font-color);
+    background: none;
+    outline: none;
+    padding-bottom: 2px;
+    font-size: 19px;
+}
+
+.btn-submit {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 20px;
+    font-size: 18px;
+    text-align: center;
+    background: #fff;
+    border: none;
+    border-radius: 36px;
+    box-shadow: 0px 3px 6px #00000029;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: var(--primary-bg-color);
+}
+
+/* Buttons Styling */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

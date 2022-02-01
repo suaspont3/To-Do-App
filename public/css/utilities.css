@@ -1,3 +1,12 @@
+/* Variables */
+/* Variables */
+:root {
+    --primary-font-color: #707070;
+    --primary-bg-color: #fcfcfc;
+    --side-bar-color: #535644;
+    --max-width: 500px;
+}
+
 /* Fonts */
 .light-font {
     font-weight: 300;
@@ -5,4 +14,11 @@
 
 .bold-font {
     font-weight: bold;
+}
+
+
+/* Message Styling */
+.message {
+    text-align: center;
+    color: #ff0000;
 }
