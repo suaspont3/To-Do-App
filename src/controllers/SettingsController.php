@@ -46,7 +46,7 @@ class SettingsController extends AppController {
             $user = $this->userRepository->getUser('email', $email);
             if (!$user) {
                 $this->userRepository->modifyUser('email', $email, $id);
-                $_SESSION['email'] = $email;
+//                $_SESSION['email'] = $email;
                 $isAnyChange = true;
             } else {
                 $this->render('settings', ['messages' => ['Email '.$email.' already exists!']]);
