@@ -7,6 +7,7 @@ $path = parse_url($path, PHP_URL_PATH);
 
 Routing::get('', 'DefaultController');
 Routing::get('tasks', 'TaskController');
+Routing::get('adminPanel', 'TaskController');
 Routing::post('login', 'SecurityController');
 Routing::post('signup', 'SecurityController');
 Routing::post('settings', 'SettingsController');

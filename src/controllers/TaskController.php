@@ -15,6 +15,22 @@ class TaskController extends AppController {
         $this->userRepository = new UserRepository();
     }
 
+    public function adminPanel() {
+        session_start();
+        if (!$_SESSION['isLoggedIn']) {
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}");
+        }
+
+        if ($_SESSION['group_id'] == 1) {
+            $users = $this->userRepository->getUsers(2);
+            $this->render('adminPanel', ['users' => $users]);
+        } else {
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/tasks");
+        }
+    }
+
     public function tasks() {
         session_start();
         if (!$_SESSION['isLoggedIn']) {

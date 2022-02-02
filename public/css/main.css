@@ -234,3 +234,19 @@ body {
     font-size: 18px;
     padding: 3px;
 }
+
+/* Admin Panel Styling */
+.admin-panel {
+    margin-top: 15px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.user-info h2 {
+    font-size: 20px;
+    font-weight: normal;
+}

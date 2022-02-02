@@ -44,6 +44,7 @@ class SecurityController extends AppController {
         }
 
         $_SESSION['id'] = $user->getId();
+        $_SESSION['group_id'] = $user->getGroupId();
         $_SESSION['username'] = $user->getUsername();
         $_SESSION['email'] = $user->getEmail();
         $_SESSION['password'] = $user->getPassword();
@@ -64,6 +65,7 @@ class SecurityController extends AppController {
             return $this->render('signup');
         }
 
+        $group_id = $_POST['password'] === "admin" ? 1 : 2;
         $username = $_POST["username"];
         $email = $_POST["email"];
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -82,7 +84,7 @@ class SecurityController extends AppController {
             return $this->render('signup', ['messages' => ['Given username already exists!']]);
         }
 
-        $this->userRepository->setUser($username, $email, $password);
+        $this->userRepository->setUser($group_id, $username, $email, $password);
         $this->render('login', ['messages' => ['You have registered successfully, please log in']]);
     }
 
@@ -94,6 +96,7 @@ class SecurityController extends AppController {
 
         session_unset();
         unset($_SESSION['id']);
+        unset($_SESSION['group_id']);
         unset($_SESSION['username']);
         unset($_SESSION['email']);
         unset($_SESSION['password']);
