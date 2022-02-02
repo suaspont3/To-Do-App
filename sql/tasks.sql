@@ -10,3 +10,11 @@ create table tasks
 create unique index tasks_id_uindex
     on tasks (id);
 
+insert into tasks (user_id, content)
+values (1, 'Ban example1');
+
+insert into tasks (user_id, content)
+values (2, 'Buy something tasty');
+
+insert into tasks (user_id, content)
+values (2, 'Finish project');
