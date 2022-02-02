@@ -69,3 +69,14 @@
 .redirect-btn:hover {
     color: #cccccc;
 }
+
+@media only screen and (max-width: 420px) {
+    .primary-btn,
+    .redirect-btn {
+        font-size: 16px;
+    }
+
+    .message {
+        margin-bottom: 10px;
+    }
+}

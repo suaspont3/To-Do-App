@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/201024f681.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/utilities.css">
     <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/mobile.css">
 
     <script src="public/js/redirect.js"></script>
     <title>TodoNow | Settings</title>

@@ -1,0 +1,46 @@
+@media only screen and (max-width: 420px) {
+    /* Container Positioning */
+    .container {
+        max-width: 373px;
+    }
+
+    /* Logo Styling */
+    .logo {
+        width: 100%;
+        margin: 88px auto;
+    }
+
+    /* Dialog Type Styling */
+    .dialog-type {
+        font-size: 20px;
+        padding-bottom: 50px;
+    }
+
+    /* Dialog Form Styling */
+    .dialog-form {
+        padding-bottom: 120px;
+    }
+
+    /* Form Group Styling */
+    .form-group {
+        margin-bottom: 32px;
+    }
+
+    .last-element {
+        margin-bottom: 15px;
+    }
+
+    .form-group input {
+        font-size: 16px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    /* Footer Styling */
+    .footer h2 {
+        font-size: 16px;
+        padding-bottom: 150px;
+    }
+}
