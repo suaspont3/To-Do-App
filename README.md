@@ -122,4 +122,8 @@ Your data has been updated.
 
 > Po kliknięciu w `Today` na panelu bocznym, użytkownik zostanie przekierowany na stronę z listą zadań.
 
+## Admin panel
+![AdminPanel](/doc/admin_panel.png)
+Strona panelu administracyjnego dostępna tylko dla administratora. Aby dostać się do tej strony, administrator musi sam dodać `adminPanel` do url strony. Na tej stronie administrator może przeglądać ogólne dane o użytkownikach (**username**, **email**).
+
 ---
