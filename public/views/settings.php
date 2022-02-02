@@ -18,18 +18,21 @@
 <main class="main">
     <nav class="navbar">
         <img src="public/img/logo.svg" alt="logo" class="logo">
-
-        <div class="navbar-element">
-            <button class="btn-redirect" onclick="redirect('tasks')">
-                <i class="fas fa-tasks"></i>
-                <h2>Today</h2>
-            </button>
-        </div>
         <div class="navbar-element current">
-            <button class="btn-redirect" onclick="redirect('settings')">
+            <div class="navbar-container">
+                <i class="fas fa-tasks"></i>
+                <button class="redirect-btn" onclick="redirect('tasks')">
+                    <h3>Today</h3>
+                </button>
+            </div>
+        </div>
+        <div class="navbar-element">
+            <div class="navbar-container">
                 <i class="fas fa-cog"></i>
-                <h2>Settings</h2>
-            </button>
+                <button class="redirect-btn" onclick="redirect('settings')">
+                    <h3>Settings</h3>
+                </button>
+            </div>
         </div>
     </nav>
     <section class="section">
@@ -54,22 +57,22 @@
                 </div>
                 <form action="settings" method="POST" class="settings-form">
                     <div class="settings-element">
-                        <label for="username">Username</label>
+                        <label for="username" class="bold-font">Username</label>
                         <input type="text" name="username" id="username" placeholder="Enter new username">
                     </div>
                     <div class="settings-element">
-                        <label for="email">Email</label>
+                        <label for="email" class="bold-font">Email</label>
                         <input type="text" name="email" id="email" placeholder="Enter new email">
                     </div>
                     <div class="settings-element">
-                        <label for="password">Password</label>
+                        <label for="password" class="bold-font">Password</label>
                         <input type="password" name="password-old" id="password-old" placeholder="Enter old password">
                         <input type="password" name="password-new" id="password-new" placeholder="Enter new password">
                     </div>
-                    <button type="submit" class="btn-submit">Apply changes</div>
+                    <button type="submit" class="primary-btn submit-form">Apply changes</div>
                 </form>
                 <form action="logout" method="POST" class="settings-form">
-                    <button class="btn-submit">Log out</div>
+                    <button class="primary-btn submit-form">Log out</div>
                 </form>
             </div>
         </div>

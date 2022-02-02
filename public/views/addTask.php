@@ -19,16 +19,20 @@
     <nav class="navbar">
         <img src="public/img/logo.svg" alt="logo" class="logo">
         <div class="navbar-element current">
-            <button class="btn-redirect" onclick="redirect('tasks')">
+            <div class="navbar-container">
                 <i class="fas fa-tasks"></i>
-                <h2>Today</h2>
-            </button>
+                <button class="redirect-btn" onclick="redirect('tasks')">
+                    <h3>Today</h3>
+                </button>
+            </div>
         </div>
         <div class="navbar-element">
-            <button class="btn-redirect" onclick="redirect('settings')">
+            <div class="navbar-container">
                 <i class="fas fa-cog"></i>
-                <h2>Settings</h2>
-            </button>
+                <button class="redirect-btn" onclick="redirect('settings')">
+                    <h3>Settings</h3>
+                </button>
+            </div>
         </div>
     </nav>
     <section class="section">
@@ -41,15 +45,13 @@
             <div class="content">
                 <div class="content-header">
                     <h1>Today</h1>
-                    <!-- INFO: unnecessary (action, method) in this case -->
                     <form>
-                        <button type="submit" class="add-btn">
-                            <span class="red-button">+</span>Add task
+                        <button type="submit" class="redirect-btn">
+                            <span>+&nbsp;</span>Add task
                         </button>
                     </form>
                 </div>
                 <div class="dialog-window">
-                <!--         TODO: Implement task creating           -->
                     <div class="message">
                         <?php if(isset($messages)){
                             foreach($messages as $message)
@@ -63,8 +65,8 @@
                         <input type="text" name="content" id="content" placeholder="Your task must be here">
                     </form>
                     <div class="buttons">
-                        <button type="submit" class="btn-submit" form="dialog-form">Add</button>
-                        <button class="btn-submit" onclick="redirect('tasks')">Cancel</button>
+                        <button class="primary-btn submit-form" type="submit" form="dialog-form">Add</button>
+                        <button class="primary-btn submit-form" onclick="redirect('tasks')">Cancel</button>
                     </div>
                 </div>
             </div>

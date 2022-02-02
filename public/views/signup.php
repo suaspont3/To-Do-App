@@ -44,12 +44,12 @@
                     <input type="text" name="email" id="email" class="light-font" placeholder="Enter email">
                     <label for="email">EMAIL</label>
                 </div>
-                <button type="submit" class="btn">Sign Up</button>
+                <button type="submit" class="primary-btn">Sign Up</button>
             </form>
         </div>
         <div class="footer">
             <h2>Already have an account?
-                <button onclick="redirect('login')" class="btn-redirect"><span class="bold-font">Log In</span></button>
+                <button onclick="redirect('login')" class="redirect-btn"><span class="bold-font">Log In</span></button>
             </h2>
         </div>
     </div>

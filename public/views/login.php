@@ -39,7 +39,7 @@
                     <input type="password" name="password" id="password" class="light-font" placeholder="Enter your password">
                     <label for="password">PASSWORD</label>
                 </div>
-                <button type="submit" class="btn">Log In</button>
+                <button type="submit" class="primary-btn">Log In</button>
             </form>
         </div>
         <div class="footer">

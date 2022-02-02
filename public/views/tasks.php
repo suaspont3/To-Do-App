@@ -19,24 +19,25 @@
     <nav class="navbar">
         <img src="public/img/logo.svg" alt="logo" class="logo">
         <div class="navbar-element current">
-            <!--    [+]TODO: Redirect to tasks (index.php -> Routing.php -> DefaultController.php -> tasks.php)    -->
-            <button class="btn-redirect" onclick="redirect('tasks')">
+            <div class="navbar-container">
                 <i class="fas fa-tasks"></i>
-                <h2>Today</h2>
-            </button>
+                <button class="redirect-btn" onclick="redirect('tasks')">
+                    <h3>Today</h3>
+                </button>
+            </div>
         </div>
         <div class="navbar-element">
-            <!--    [+]TODO: Redirect to settings (index.php -> Routing.php -> DefaultController.php -> settings.php)  -->
-            <button class="btn-redirect" onclick="redirect('settings')">
+            <div class="navbar-container">
                 <i class="fas fa-cog"></i>
-                <h2>Settings</h2>
-            </button>
+                <button class="redirect-btn" onclick="redirect('settings')">
+                    <h3>Settings</h3>
+                </button>
+            </div>
         </div>
     </nav>
     <section class="section">
         <div class="section-container">
             <div class="header">
-                <!--   [+]TODO: Redirect to settings (index.php -> Routing.php -> DefaultController.php -> settings.php)   -->
                 <button class="user-logo" onclick="redirect('settings')">
                     <i class="fas fa-user"></i>
                 </button>
@@ -44,15 +45,11 @@
             <div class="content">
                 <div class="content-header">
                     <h1>Today</h1>
-                    <!--     [+]TODO: Redirect to addTask (index.php -> Routing.php -> TaskController.php)        -->
-                    <!--        TODO: !It just redirect from tasks to add-task            -->
-                    <button class="add-btn" onclick="redirect('addTask')">
-                        <span class="red-button">+</span>Add task
+                    <button class="redirect-btn" onclick="redirect('addTask')">
+                        <span>+&nbsp;</span>Add task
                     </button>
                     </form>
                 </div>
-                <!-- [+]TODO: implement auto input from DB -->
-                <!--    TODO: duplicate code -> import?            -->
                 <div class="todo-items">
                     <form action="deleteTask" method="POST" id="form">
                         <?php foreach ($tasks as $task): ?>
@@ -63,7 +60,7 @@
                         <?php endforeach; ?>
                     </form>
                 </div>
-                <button class="btn-submit" type="submit" form="form">Apply</button>
+                <button class="primary-btn submit-form" type="submit" form="form">Apply</button>
             </div>
         </div>
     </section>

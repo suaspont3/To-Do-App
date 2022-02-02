@@ -1,5 +1,5 @@
 /*
- * Stylings for task and user configuration page
+ * Styling for task/user configuration/admin panel page
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Roboto:wght@300;400;700&display=swap');
@@ -15,6 +15,10 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--primary-bg-color);
+}
+
+h2 {
+    font-size: 20px;
 }
 
 /* "Main" Styling */
@@ -69,31 +73,14 @@ body {
     z-index: -1;
 }
 
-/* Navbar Button(Redirection) Styling */
-.btn-redirect {
-    display: flex;
-    flex-direction: row;
-    background: none;
-    border: none;
+/* Navbar Container Positioning */
+.navbar-container {
     margin: 0px 46px;
-    cursor: pointer;
 }
 
-.btn-redirect:hover h2 {
-    color: var(--primary-font-color);
+.navbar-container i {
+    margin-right: 5px;
 }
-
-.btn-redirect i {
-    position: relative;
-    top: 5px;
-    margin-right: 10px;
-}
-
-.btn-redirect h2 {
-    font-size: 20px;
-    font-weight: normal;
-}
-
 
 /* Section Styling */
 .section {
@@ -129,11 +116,6 @@ body {
     background: var(--primary-bg-color);
 }
 
-/* Section Content Styling */
-.content {
-
-}
-
 /* Content Header Styling */
 .content-header {
     display: flex;
@@ -144,25 +126,7 @@ body {
     padding-bottom: 10px;
 }
 
-.add-btn {
-    border: none;
-    background: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.add-btn span {
-    display: block-inline;
-    color: red;
-    margin-right: 5px;
-}
-
-.add-btn:hover {
-    font-size: 19px;
-    font-weight: bold;
-}
-
-/* Todo Items Styling */
+/* To-Do Items Styling */
 .todo-items {
     display: flex;
     margin: 15px 0px 0px 10px;
@@ -172,6 +136,12 @@ body {
 .item input {
     transform: scale(1.5);
     margin-right: 10px;
+}
+
+/* Submit Form Styling */
+.submit-form {
+    width: 15%;
+    margin: 10px 0px;
 }
 
 /* Dialog Window Styling */
@@ -189,24 +159,7 @@ body {
     font-size: 19px;
 }
 
-.btn-submit {
-    display: block;
-    margin-top: 10px;
-    padding: 5px 20px;
-    font-size: 18px;
-    text-align: center;
-    background: #fff;
-    border: none;
-    border-radius: 36px;
-    box-shadow: 0px 3px 6px #00000029;
-    cursor: pointer;
-}
-
-.btn-submit:hover {
-    background: var(--primary-bg-color);
-}
-
-/* Buttons Styling */
+/* Buttons Positioning */
 .buttons {
     display: flex;
     flex-direction: row;
@@ -225,7 +178,6 @@ body {
 
 .settings-element label {
     font-size: 20px;
-    font-weight: bold;
 }
 
 .settings-element input {
@@ -244,9 +196,4 @@ body {
     display: flex;
     flex-direction: row;
     gap: 15px;
-}
-
-.user-info h2 {
-    font-size: 20px;
-    font-weight: normal;
 }

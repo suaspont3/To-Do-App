@@ -19,16 +19,20 @@
     <nav class="navbar">
         <img src="public/img/logo.svg" alt="logo" class="logo">
         <div class="navbar-element current">
-            <button class="btn-redirect" onclick="redirect('tasks')">
+            <div class="navbar-container">
                 <i class="fas fa-tasks"></i>
-                <h2>Today</h2>
-            </button>
+                <button class="redirect-btn" onclick="redirect('tasks')">
+                    <h3>Today</h3>
+                </button>
+            </div>
         </div>
         <div class="navbar-element">
-            <button class="btn-redirect" onclick="redirect('settings')">
+            <div class="navbar-container">
                 <i class="fas fa-cog"></i>
-                <h2>Settings</h2>
-            </button>
+                <button class="redirect-btn" onclick="redirect('settings')">
+                    <h3>Settings</h3>
+                </button>
+            </div>
         </div>
     </nav>
     <section class="section">
@@ -45,8 +49,8 @@
                 <div class="admin-panel">
                     <?php foreach ($users as $user): ?>
                     <div class="user-info">
-                        <h2><b>Username:</b> <?= $user->getUsername()?></h2>
-                        <h2><b>Email:</b> <?= $user->getEmail()?></h2>
+                        <h2 class="regular-font"><b>Username:</b> <?= $user->getUsername()?></h2>
+                        <h2 class="regular-font"><b>Email:</b> <?= $user->getEmail()?></h2>
                     </div>
                     <?php endforeach; ?>
                 </div>
