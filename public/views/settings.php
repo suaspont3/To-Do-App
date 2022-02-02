@@ -17,7 +17,7 @@
 <body>
 <main class="main">
     <nav class="navbar">
-        <img src="public/img/logo.png" alt="logo" class="logo">
+        <img src="public/img/logo.svg" alt="logo" class="logo">
 
         <div class="navbar-element">
             <button class="btn-redirect" onclick="redirect('tasks')">

@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="public/img/logo.png" alt="logo" class="logo">
+        <img src="public/img/logo.svg" alt="logo" class="logo">
         <div class="dialog-window">
             <h1 class="dialog-type">Sign Up</h1>
             <form action="signup" method="POST" class="dialog-form">
