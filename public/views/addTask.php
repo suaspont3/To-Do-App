@@ -47,7 +47,7 @@
                     <h1>Today</h1>
                     <form>
                         <button type="submit" class="redirect-btn">
-                            <span>+&nbsp;</span>Add task
+                            <span class="red-font">+&nbsp;</span>Add task
                         </button>
                     </form>
                 </div>

@@ -32,6 +32,9 @@
     font-weight: bold;
 }
 
+.red-font {
+    color: #ff0000;
+}
 
 /*
  * Buttons Styling
@@ -65,8 +68,4 @@
 
 .redirect-btn:hover {
     color: #cccccc;
-}
-
-.redirect-btn span {
-    color: #ff0000;
 }

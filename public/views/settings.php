@@ -18,7 +18,7 @@
 <main class="main">
     <nav class="navbar">
         <img src="public/img/logo.svg" alt="logo" class="logo">
-        <div class="navbar-element current">
+        <div class="navbar-element">
             <div class="navbar-container">
                 <i class="fas fa-tasks"></i>
                 <button class="redirect-btn" onclick="redirect('tasks')">
@@ -26,7 +26,7 @@
                 </button>
             </div>
         </div>
-        <div class="navbar-element">
+        <div class="navbar-element current">
             <div class="navbar-container">
                 <i class="fas fa-cog"></i>
                 <button class="redirect-btn" onclick="redirect('settings')">

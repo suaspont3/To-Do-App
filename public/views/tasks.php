@@ -46,7 +46,7 @@
                 <div class="content-header">
                     <h1>Today</h1>
                     <button class="redirect-btn" onclick="redirect('addTask')">
-                        <span>+&nbsp;</span>Add task
+                        <span class="red-font">+&nbsp;</span>Add task
                     </button>
                     </form>
                 </div>

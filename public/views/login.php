@@ -44,7 +44,7 @@
         </div>
         <div class="footer">
             <h2>Don't have an account?
-                <button onclick="redirect('signup')" class="btn-redirect"><span class="bold-font">Sign Up</span></button>
+                <button onclick="redirect('signup')" class="redirect-btn"><span class="bold-font">Sign Up</span></button>
             </h2>
         </div>
     </div>
