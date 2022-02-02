@@ -127,3 +127,11 @@ Your data has been updated.
 Strona panelu administracyjnego dostępna tylko dla administratora. Aby dostać się do tej strony, administrator musi sam dodać `adminPanel` do url strony. Na tej stronie administrator może przeglądać ogólne dane o użytkownikach (**username**, **email**).
 
 ---
+
+## Wersja mobilna
+![RegMobile](/doc/registration_iphone.png)
+![LoginMobile](/doc/login_iphone.png)
+![TasksMobile](/doc/tasks_iphone.png)
+![AddTaskMobile](/doc/add_task_iphone.png)
+![SettingsMobile](/doc/settings_iphone.png)
+![AdminPanelMobile](/doc/admin_panel_iphone.png)
