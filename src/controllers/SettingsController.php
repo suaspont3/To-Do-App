@@ -33,6 +33,7 @@ class SettingsController extends AppController {
             $user = $this->userRepository->getUser('username', $username);
             if (!$user) {
                 $this->userRepository->modifyUser('username', $username, $id);
+//                $_SESSION['username'] = $username;
                 $isAnyChange = true;
             } else {
                 $this->render('settings', ['messages' => ['User '.$username.' already exists!']]);
@@ -45,6 +46,7 @@ class SettingsController extends AppController {
             $user = $this->userRepository->getUser('email', $email);
             if (!$user) {
                 $this->userRepository->modifyUser('email', $email, $id);
+                $_SESSION['email'] = $email;
                 $isAnyChange = true;
             } else {
                 $this->render('settings', ['messages' => ['Email '.$email.' already exists!']]);
@@ -57,6 +59,7 @@ class SettingsController extends AppController {
             if (password_verify($oldPassword, $oldUser->getPassword())) {
                 $newPassword = password_hash($newPassword, PASSWORD_DEFAULT);
                 $this->userRepository->modifyUser('password', $newPassword, $id);
+//                $_SESSION['password'] = $newPassword;
                 $isAnyChange = true;
             } else {
                 $this->render('settings', ['messages' => ['You have entered wrong password']]);
