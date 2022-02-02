@@ -14,7 +14,8 @@ class SettingsController extends AppController {
     public function settings() {
         session_start();
         if (!$_SESSION['isLoggedIn']) {
-            return $this->render('login');
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}");
         }
 
         if (!$this->isPost()) {

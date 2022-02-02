@@ -18,7 +18,8 @@ class TaskController extends AppController {
     public function tasks() {
         session_start();
         if (!$_SESSION['isLoggedIn']) {
-            return $this->render('login');
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}");
         }
 
         $userID = $_SESSION['id'];
@@ -32,7 +33,8 @@ class TaskController extends AppController {
     public function addTask() {
         session_start();
         if (!$_SESSION['isLoggedIn']) {
-            return $this->render('login');
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}");
         }
 
         if (!$this->isPost()) {
@@ -53,7 +55,8 @@ class TaskController extends AppController {
     public function deleteTask() {
         session_start();
         if (!$_SESSION['isLoggedIn']) {
-            return $this->render('login');
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}");
         }
 
         if(!$this->isPost()) {

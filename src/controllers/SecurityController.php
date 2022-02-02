@@ -18,7 +18,8 @@ class SecurityController extends AppController {
     public function login() {
         session_start();
         if ($_SESSION['isLoggedIn']) {
-            $this->taskController->tasks();
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/tasks");
         }
 
         if (!$this->isPost()) {
@@ -55,7 +56,8 @@ class SecurityController extends AppController {
     public function signup() {
         session_start();
         if ($_SESSION['isLoggedIn']) {
-            $this->taskController->tasks();
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/tasks");
         }
 
         if (!$this->isPost()) {
