@@ -16,32 +16,10 @@
 </head>
 <body>
 <main class="main">
-    <nav class="navbar">
-        <img src="public/img/logo.svg" alt="logo" class="logo">
-        <div class="navbar-element current">
-            <div class="navbar-container">
-                <i class="fas fa-tasks"></i>
-                <button class="redirect-btn" onclick="redirect('tasks')">
-                    <h3>Today</h3>
-                </button>
-            </div>
-        </div>
-        <div class="navbar-element">
-            <div class="navbar-container">
-                <i class="fas fa-cog"></i>
-                <button class="redirect-btn" onclick="redirect('settings')">
-                    <h3>Settings</h3>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <?php include('public/views/navbar.php')?>
     <section class="section">
         <div class="section-container">
-            <div class="header">
-                <button class="user-logo" onclick="redirect('settings')">
-                    <i class="fas fa-user"></i>
-                </button>
-            </div>
+            <?php include('public/views/header.php')?>
             <div class="content">
                 <div class="content-header">
                     <h1>Admin Panel | Users information </h1>
